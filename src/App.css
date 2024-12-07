@@ -1,0 +1,176 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+  background: #fce4ec; /* Soft pink background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #333;
+}
+
+/* App container styling */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Message Container */
+.message-container {
+  background: #ffffff; /* White background */
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-out, bounce 2s infinite; /* Multiple animations */
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+
+/* Animation for bounce (up and down) effect */
+@keyframes bounce {
+  0% {
+    transform: translateY(0); /* Start at original position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up a little bit */
+  }
+  100% {
+    transform: translateY(0); /* Move back down to the original position */
+  }
+}
+
+/* Title Animation */
+h1 {
+  font-size: 2.5rem;
+  color: #d81b60; /* Pink color */
+  margin-bottom: 20px;
+  font-weight: 600;
+  animation: shake 0.5s ease-in-out infinite;
+}
+
+/* Animation for shaking the title */
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Message text styling with animation */
+.message {
+  font-size: 1rem; /* Smaller font size */
+  color: #555;
+  font-weight: 500;
+  line-height: 1.6;
+  animation: zoomIn 2s ease-out, floatEffect 3s ease-in-out infinite; /* Zoom and float effect */
+  margin-top: 20px;
+  max-width: 90%; /* Ensure text doesn't overflow */
+}
+
+/* Animation for the zoom-in effect */
+@keyframes zoomIn {
+  0% {
+    transform: scale(0); /* Start small */
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2); /* Slightly bigger */
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1); /* Settle to original size */
+  }
+}
+
+/* Animation for floating effect (up and down) */
+@keyframes floatEffect {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Panda image styling */
+.panda {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 80px; /* Resize image */
+  animation: floatPanda 3s ease-in-out infinite;
+}
+
+.panda img {
+  width: 100%;
+  border-radius: 10px;
+  animation: floatPanda 3s ease-in-out infinite;
+}
+
+/* Animation for floating panda */
+@keyframes floatPanda {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Button Styling for future use (optional) */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
